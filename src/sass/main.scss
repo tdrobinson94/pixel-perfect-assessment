@@ -8,17 +8,24 @@ html{
                 justify-content: space-between;
                 padding: 0px 15px;
                 .logo{
-                    font-size: 25px;
                 }
                 .hamburger{
-
+                    display: block;
                 }
                 .links{
                     display: none;
+                    a{
+                        padding: 0 10px;
+                        font-size: 12px;
+                    }
+                    .middle{
+                        border-left: 1px solid black;
+                        border-right: 1px solid black;
+                    }
                 }
             }
             .gray_separator{
-                height: 17px;
+                height: 20px;
                 background: darkgray;
                 margin: 12px 0;
             }
@@ -39,7 +46,7 @@ html{
                     p{
                         font-size: 14px;
                         color: gray;
-                        margin: 0px;
+                        margin: 5px 0;
                     }
                     img{
                         height: 30%;
@@ -49,7 +56,7 @@ html{
                 }
                 .side_box{
                     .social{
-                        h3{
+                        .heading{
                             margin: none;
                         }
                         .icons{
@@ -80,6 +87,89 @@ html{
                 .middle{
                     border-left: 1px solid black;
                     border-right: 1px solid black;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 650px){
+    html{
+        body{
+            .container{
+                .navbar{
+                    .logo{
+                    }
+                    .hamburger{
+                        display: none;
+                    }
+                    .links{
+                        display: block;
+                    }
+                }
+                .gray_separator{
+                    height: 40px;
+                }
+                .header{
+                    height: 215px;
+                }
+                .body{
+                    display: flex;
+                    justify-content: space-between;
+                    .box{
+                        max-width: 65%;
+                        padding: 0 35px;
+                        .heading{
+
+                        }
+                        p{
+
+                        }
+                        img{
+                            width: 250px;
+                            height: 150px;
+                        }
+                    }
+                    .side_box{
+                        max-width: 35%;
+                        padding: 0 35px;
+                        .social{
+                            border: 1px solid black;
+                            padding: 20px;
+                            margin-bottom: 20px;
+                            .heading{
+                                margin-bottom: 10px;
+                                font-weight: bold;
+                            }
+                        }
+                        .useful_links{
+                            .heading{
+                                margin-bottom: 10px;
+                                font-weight: bold;
+                            }
+                            padding: 20px;
+                            border: 1px solid black;
+                            a{
+                                font-size: 14px;
+                                color: gray;
+                            }
+                        }
+                    }
+                }
+                .bottom{
+                    height: 40px;
+                    background: lightgray;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    a{
+                        padding: 0 10px;
+                        font-size: 12px;
+                    }
+                    .middle{
+                        border-left: 1px solid black;
+                        border-right: 1px solid black;
+                    }
                 }
             }
         }
