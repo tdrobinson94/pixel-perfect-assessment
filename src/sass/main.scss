@@ -11,9 +11,13 @@ html{
                 }
                 .hamburger{
                     display: block;
+                    background: none;
+                    border: none;
                 }
                 .links{
-                    display: none;
+                    overflow: hidden;
+                    height: 0px;
+                    width: 0px;
                     a{
                         padding: 0 10px;
                         font-size: 12px;
@@ -32,8 +36,9 @@ html{
                     left: 0;
                     width: 100%;
                     background: gold;
-                    // animation-name: slide;
-                    // animation: 4s;
+                    animation-name: slidedown;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
                     a{
                         display: block;
                         width: 100%;
@@ -47,15 +52,16 @@ html{
                         border-right: none;
                     }
                 }
-                // Animation for dropdown menu to slide down
-                // @keyframes slide {
-                //     height: auto;
-                // }
+                @keyframes slidedown {
+                    100% {
+                        height: 96px;
+                    }
+                }
             }
             // Separating navbar and the rest of the page
             .gray_separator{
                 height: 20px;
-                background: darkgray;
+                background: linear-gradient(rgb(220, 220, 220), rgb(100, 100, 100));
                 margin: 10px 0;
             }
             .header{
@@ -150,7 +156,9 @@ html{
                         display: none;
                     }
                     .links{
-                        display: block;
+                        overflow: visible;
+                        height: auto;
+                        width: auto;
                     }
                 }
                 .gray_separator{
